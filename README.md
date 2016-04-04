@@ -133,7 +133,7 @@ crumb :project_issues do |project|
   parent project # inferred to :project
 end
 
-# Child 
+# Child
 crumb :issue do |issue|
   link issue.name, issue_path(issue)
   parent :project_issues, issue.project
@@ -346,13 +346,15 @@ You are very welcome to help improve Gretel if you have suggestions for features
 To contribute:
 
 1. Fork the project
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Make your changes
-4. Add tests
-5. Run `rake` to make sure all tests pass
-6. Commit your changes (`git commit -am 'Add new feature'`)
-7. Push to the branch (`git push origin my-new-feature`)
-8. Create new pull request
+2. Config desired Gemfile (`bundle config --local gemfile /path/to/gretel/gemfiles/Gemfile-rails.4.2.x`)
+3. Prepare test DB (`cd test/dummy; rake db:migrate; rake db:test:prepare; cd ../..`)
+4. Create your feature branch (`git checkout -b my-new-feature`)
+5. Make your changes
+6. Add tests
+7. Run `rake` to make sure all tests pass
+8. Commit your changes (`git commit -am 'Add new feature'`)
+9. Push to the branch (`git push origin my-new-feature`)
+10. Create new pull request
 
 Thanks.
 
